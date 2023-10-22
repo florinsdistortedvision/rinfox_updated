@@ -41,17 +41,17 @@ Rinfox es un tema para Mozilla Firefox 115ESR que copia la apariencia de Interne
 
 ###### Gracias a una nueva actualización, ahora puedes elegir entre Traducciones. Elige el que mas te guste y asegúrate de ir copiando solo las carpetas como se indica a continuación.
 
-4. Ve al directorio donde instalaste Firefox (normalmente en C:\Program Files\Mozilla Firefox) y copia los **contenidos** de la carpeta `ffroot` dentro de la carpeta `rinfox-0.4.1\Spanish`  dentro de éste, y reemplazar archivos si se le pregunta.
-5. Abre Firefox, escribe `about:support` en la barra de direcciones. Busca hasta que encuentres una pestaña que diga `Carpeta del perfil` y haz clic en `Abrir carpeta`. Copia la carpeta "chrome" dentro de la carpeta `rinfox-0.4.1\Spanish` dentro de ésta. Ademas dentro de `about:support` sube y haz clic en `Limpiar caché de inicio...`.
+4. Ve al directorio donde instalaste Firefox (normalmente en C:\Program Files\Mozilla Firefox) y copia los **contenidos** de la carpeta `ffroot` dentro de la carpeta `rinfox\Spanish`  dentro de éste, y reemplaza los archivos si se le pregunta.
+5. Abre Firefox, escribe `about:support` en la barra de direcciones. Busca hasta que encuentres una pestaña que diga `Carpeta del perfil` y haz clic en `Abrir carpeta`. Copia la carpeta "chrome" dentro de la carpeta `rinfox\Spanish` dentro de ésta. Ademas dentro de `about:support` sube y haz clic en `Limpiar caché de inicio...`.
 6. Deja que Firefox se reinicie.
 7. El tema esta aplicado, pero el orden de los elementos no se ve bien. Para arreglar esto haz clic derecho en la barra de pestañas y luego en "Personalizar barra de herramientas".
   * Si tienes el tema oscuro de Windows, el tema no se verá bien, así que desactivalo yendo a `about:addons` > Temas > y activa el tema claro
 9. En la pestaña que se abre, marca la casilla `Barra de titulo` abajo del todo, y quita todo lo que se pueda quitar de la barra de herramientas haciendo clic derecho en el elemento y luego en "Quitar de la barra de herramientas". Ahora agrega poco a poco los elementos copiando el diseño que se muestra en la imagen:
 ![](ie7%20layout.png)
    * Recordar que la barra de menú está oculta, y queza debas desmarcar la opción de "Ocultar descargas".
-10. Para tener Pestañas Rápidas [puedes simplemente instalar TipTab de la tienda de add-ons de Firefox](https://addons.mozilla.org/es-ES/firefox/addon/tip-tab/). Simplemente fíjalo a la barra de herramientas y agrégalo en su lugar.
-11. Para tener los encabezados de RSS. [puedes simplemente instalar Feedbro de la tienda de add-ons de Firefox](https://addons.mozilla.org/en-US/firefox/addon/feedbroreader/). Simplemente fíjalo a la barra de herramientas y agrégalo en su lugar.
-12. Para tener el botón de Añadir a favoritos de IE8, [puedes simplemente instalar "Add to Favorites Bar" de la tienda de add-ons de Firefox](https://addons.mozilla.org/en-US/firefox/addon/add-to-favorites-bar/). Simplemente fíjalo a la barra de herramientas y colócalo en la barra de marcadores **Nota, solo en el modo IE8, también la extensión sólo está en inglés**.
+10. Para tener Pestañas Rápidas [puedes instalar TipTab de la tienda de add-ons de Firefox](https://addons.mozilla.org/es-ES/firefox/addon/tip-tab/). Sólo fíjalo a la barra de herramientas y colócalo en su sitio.
+11. Para tener los encabezados de RSS. [puedes instalar Feedbro de la tienda de add-ons de Firefox](https://addons.mozilla.org/en-US/firefox/addon/feedbroreader/). Simplemente fíjalo a la barra de herramientas y colócalo en su sitio.
+12. Para tener el botón de Añadir a favoritos de IE8, [puedes instalar "Add to Favorites Bar" desde la tienda de add-ons de Firefox](https://addons.mozilla.org/en-US/firefox/addon/add-to-favorites-bar/). Sólo fíjalo a la barra de herramientas y colócalo en la barra de marcadores **Nota, solo en el modo IE8, también la extensión sólo está en inglés**.
 13. Ahora sería una buena idea desactivar las actualizaciones de Firefox. Aunque actualizar Firefox ESR **no debería** romper cosas, siempre va a romper cambios a omni.ja (página de inicio, página de inprivate y nueva pestaña) junto que los iconos (iconos de Firefox) serán revertidos, si esto no te importa mucho puedes simplemente omitir este paso. Y si quieres desactivarlo, puedes hacerlo [siguiendo la siguiente guía](https://www.askvg.com/tip-disable-automatic-updates-in-mozilla-firefox/#how_to_disable_automatic_updates_in_mozilla_firefox) (en inglés):
 
 ## Tematizando TipTab para que se vea como las Pestañas Rápidas de IE
@@ -64,7 +64,7 @@ Rinfox es un tema para Mozilla Firefox 115ESR que copia la apariencia de Interne
 
 ## Alternar entre el modo Internet Explorer 7 y el modo Internet Explorer 8
 
-1. Al cambiar de modo, ocurrirán cambios como el de la ventana "Acerca de Firefox", y cambio del diseño.
+1. Al cambiar de modo, ocurrirán cambios como el de la ventana "Acerca de Firefox", y tambien el diseño va a cambiar.
 2. Para hacer esto, abre Firefox y escribe `about:config` en la barra de direcciones, y agrega el siguiente valor:
 
 * `rinfox.tweak.ie8` == **crear como Booleano** == true
@@ -77,7 +77,7 @@ Rinfox es un tema para Mozilla Firefox 115ESR que copia la apariencia de Interne
   
 ## Extras
 
-* Esta parte es opcional,sin embargo, lo hace más convincente en general. Los extras incluyen el reemplazo de la página de inicio, la página Nueva pestaña y la página inPrivate (ajustes de omni.ja), y le permiten reemplazar el ícono de Firefox en todo el sistema, además de habilitar Aero para los temas que lo admiten.
+* Esta parte es opcional, sin embargo, hace que el tema se vea más convincente en general. Los extras incluyen el reemplazo de la página de inicio, la página Nueva pestaña y la página inPrivate (ajustes de omni.ja), y le permiten reemplazar el ícono de Firefox en todo el sistema, además de habilitar Aero para los temas que lo admiten.
 * **Se recomienda utilizar esta parte con actualizaciones deshabilitadas, ya que los archivos *serán reemplazados nuevamente* cuando se instale una nueva actualización de ESR.**
 
 ### Reemplazar íconos de Firefox y activar Aero
@@ -100,8 +100,9 @@ Rinfox es un tema para Mozilla Firefox 115ESR que copia la apariencia de Interne
 1. Vaya a la carpeta de instalación de Firefox (normalmente dentro de C:\Program Files\Mozilla Firefox) > carpeta "browser". Allí deberías encontrar un archivo llamado `omni.ja`. Simplemente ábrelo con WinRar o 7Zip y extráelo en algún lugar de tu escritorio.
 2. Copia y reemplaza la carpeta "chrome" dentro de los archivos extraídos.
 3. Compríme nuevamente todo en un zip (sin crear carpetas adicionales). Cambie la extensión de .zip a .ja.
-4. Copia y reemplaza omni.ja.
-5. Abre Firefox, ve a Ajustes > Inicio y cambie dentro de Nuevas ventanas y pestañas:
+4. Copia y reemplaza omni.ja. El resultado final deberia verse así (toma en cuenta los contenidos y ubicación del archivo)
+![](omni%20ja%20contents.png) 
+5. Abre Firefox, ve a Ajustes > Inicio y cambia dentro de Nuevas ventanas y pestañas:
   * Página de inicio y nuevas ventanas > Página de inicio de Firefox (predeterminado)
   * Nuevas pestañas > Página en blanco
 6. Regresa a Ajustes > Privacidad & seguridad > Borrar datos. Marque solo Cookies y Datos del sitio y luego presione Borrar.
