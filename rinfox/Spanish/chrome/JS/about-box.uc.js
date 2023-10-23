@@ -45,7 +45,7 @@ let aboutboxinfoid;
 let aboutboxinfoupdate;
 if (isIE8Enabled) {
 	aboutboxinfoversion = "Versión: 8.0.6001.18702";
-	aboutboxinfostregnth = "Intensidad de cifrado: 256-bit";
+	aboutboxinfostregnth = "Intensidad de cifrado: 256 bitS";
 	aboutboxinfoid = "Id. del producto: 01404-014-0000025-714000";
 	aboutboxinfoupdate = "Versiones de actualización: 0";
 } else {
