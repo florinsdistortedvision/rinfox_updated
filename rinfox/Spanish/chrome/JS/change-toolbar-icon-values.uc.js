@@ -26,7 +26,7 @@ waitForElm('#PanelUI-button').then((elm) => {
 	const tabtoolbarcustomization = document.getElementById("TabsToolbar-customization-target");
 	const findlabel = document.querySelector("#PanelUI-menu-button label.toolbarbutton-text");
 	tabtoolbarcustomization.appendChild(find);
-	findlabel.setAttribute("value", "Tools");
+	findlabel.setAttribute("value", "Herramientas");
 });
 
 waitForElm('#unified-extensions-button').then((elm) => {
@@ -34,7 +34,7 @@ waitForElm('#unified-extensions-button').then((elm) => {
 	const tabtoolbarcustomization = document.getElementById("TabsToolbar-customization-target");
 	const addonlabel = document.querySelector("#unified-extensions-button label.toolbarbutton-text");
 	tabtoolbarcustomization.appendChild(addon);
-	addonlabel.setAttribute("value", "Add-ons");
+	addonlabel.setAttribute("value", "Complementos");
 });
 
 setTimeout(function () {
