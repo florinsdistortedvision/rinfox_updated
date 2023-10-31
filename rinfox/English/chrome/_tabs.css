@@ -306,7 +306,7 @@
   border-radius: 0;
   border-width: 0;
   margin: 0;
-  padding: 0 2px;
+  padding: 0 5px;
   align-items: stretch;
   /* Needed so that overflowing content overflows towards the end rather than
      getting centered. That prevents tab opening animation from looking off at
@@ -319,4 +319,24 @@
   min-height: var(--tab-min-height);
   position: relative;
   left: 0.5px !important;
+}
+
+/* remove mask for tab text */
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]),
+ .tab-label-container[textoverflow]:not([labeldirection],
+ [pinned]):-moz-locale-dir(ltr) {
+    direction: ltr;
+    mask-image: none !important;
+}
+
+/*  cut and add "..." to the text tab */
+.tab-label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.tab-label-container{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
 }

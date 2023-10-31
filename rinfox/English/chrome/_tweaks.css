@@ -470,10 +470,22 @@
         pointer-events: none !important;
         border-radius: 2px !important;
       }
-      #browser {
+     
+@supports (-moz-bool-pref("rinfox.statusbar.disabled")) {  
+  #browser {
         margin: 2px !important;
         margin-top: 0 !important;
       }
+}
+
+@supports not (-moz-bool-pref("rinfox.statusbar.disabled")) {    
+  #browser {
+        margin: 2px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+}
+
       #TabsToolbar {
         border-top: 0 !important;
       }

@@ -52,6 +52,8 @@ Rinfox is a Mozilla Firefox 115ESR theme that mimicks the look and feel of Inter
 > rinfox.extra.moremenus
 >> create as BOOLEAN, then set value as: true
 
+> toolkit.zoomManager.zoomValues
+>> change values to: .5,.75,1,1.25,1.5,2,4
 
 ###### Thanks to a new update, now you can choose between Translations. Pick whichever you like and make sure to start copying only the folders as instructed below.
 4. Go to the installation folder of Firefox (usually inside C:\Program Files\Mozilla Firefox) and copy the **contents** of ffroot folder from rinfox folder inside it, and replace when prompted the files.

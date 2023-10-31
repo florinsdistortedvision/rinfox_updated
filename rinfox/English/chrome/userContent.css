@@ -1,6 +1,7 @@
 @import url('_aboutBox.css');
 
-@-moz-document url-prefix(moz-extension://2f8bfbe6-8382-444f-84d6-9aff62eccfc3/tiptab.html) {
+/* This UserCSS will match any page within the extension with ID "tiptab@william.wong" */
+@-moz-document url-prefix(moz-extension://tiptab@william.wong/tiptab.html) {
 
 .h-container .left-pane,
 .content-title-bar,

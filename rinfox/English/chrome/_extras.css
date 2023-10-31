@@ -242,6 +242,7 @@
   } 
 }
 
+
 /* Stop Menu Bar poping up when it's disabled */
 #toolbar-menubar[autohide="true"] {
     display: none !important;
@@ -258,3 +259,5 @@
     transform: scaleY(0.85);
   }
 }
+
+

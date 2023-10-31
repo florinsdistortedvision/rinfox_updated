@@ -45,12 +45,12 @@ let aboutboxinfoid;
 let aboutboxinfoupdate;
 if (isIE8Enabled) {
 	aboutboxinfoversion = "Version: 8.0.6001.18702";
-	aboutboxinfostregnth = "Cipher Stregnth: 256-bit";
+	aboutboxinfostregnth = "Cipher Strength: 256-bit";
 	aboutboxinfoid = "Product ID: 01404-014-0000025-714000";
 	aboutboxinfoupdate = "Update Versions: 0";
 } else {
 	aboutboxinfoversion = "Version: 7.0.6002.18005";
-	aboutboxinfostregnth = "Cipher Stregnth: 256-bit";
+	aboutboxinfostregnth = "Cipher Strength: 256-bit";
 	aboutboxinfoid = "Product ID: 89580-014-0000025-71495";
 	aboutboxinfoupdate = "Update Versions:0";
 }
