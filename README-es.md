@@ -117,10 +117,9 @@ Rinfox es un tema para Mozilla Firefox 115ESR que copia la apariencia de Interne
 ## Creditos
 
 ### Desarrollo de Rinfox
-* Rinfox fué creado por [travis](https://github.com/travy-patty) quién también creó [Windows eXPerience](https://experience.noncities.com/).
-* Arreglos al diálogo `Acerca de...`, SVG de inPrivate y mejoras a la barra de herramientas por [angelbruni](https://github.com/brunobits).
-* Arreglos al tamaño de las pestañas y ocultar el botón X cuando solo haya una pestaña por RandomFIFA64#7391
-* Cambios a omni.ja por mí (florin).
+* [travis](https://github.com/travy-patty)
+* [angelbruni](https://github.com/brunobits)
+* RandomFIFA64#7391
 * [Tip Tab por William Wong](https://addons.mozilla.org/en-US/firefox/addon/tip-tab/)
 * [Feedbro por Nodetics](https://addons.mozilla.org/en-US/firefox/addon/feedbroreader/)
 * [Add To Favorites Bar por mí/florin](https://addons.mozilla.org/en-US/firefox/addon/add-to-favorites-bar/)
@@ -130,4 +129,4 @@ Rinfox es un tema para Mozilla Firefox 115ESR que copia la apariencia de Interne
 ### Traducciones
 * Inglés - yo (florin)
 * Rumano - yo (florin)
-* Español - [luisl173](https://github.com/florinsdistortedvision/rinfox_updated/pull/1)
+* Español - [luisl173](https://github.com/luisl173)
