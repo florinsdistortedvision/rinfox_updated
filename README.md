@@ -3,6 +3,11 @@
 
 Rinfox is a Mozilla Firefox 115ESR theme that mimicks the look and feel of Internet Explorer 7 (and 8). Rinfox is named after "Rincon" (IE7's codename) and is made by [travis](https://github.com/travy-patty) which also made [Windows eXPerience](https://experience.noncities.com/). This project is based on his 0.4.1 version of it, with fixes and additions (as a lot of things are to be done).
 
+## Join the Discord
+[![Join](join.png)](https://discord.gg/3pYjJU5CkY)
+
+Want to follow the latest developments, translations and bug fixes of rinFox? Join the Discord server and sign up for beta-testing, translation team or just to be notified when new updates are released!
+
 ## Features
 
 * Customized toolbar with accurate icons and layout.
