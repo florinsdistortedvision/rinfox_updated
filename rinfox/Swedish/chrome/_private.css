@@ -1,0 +1,32 @@
+:root {
+    --rinfox_tweak_ie8: 0;
+}
+
+@supports -moz-bool-pref("rinfox.tweak.ie8") {
+    :root {
+        --rinfox_tweak_ie8: 1;
+    }
+}
+
+:root:is([privatebrowsingmode=temporary]) #urlbar-input-container::before {
+  content: "";
+  height: 100%;
+  width: 75px;
+  margin-left: 2px;
+  background: url(images/InPrivate.svg);
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+#private-browsing-indicator-with-label {
+  display: none !important;
+}
+
+.tabbrowser-tab:only-of-type {
+    max-width: 300px !important; /* Close value, compare screenshots and use the actual correct one, if this is already correct then :OOO */
+}
+
+.tabbrowser-tab:first-of-type:last-of-type .tab-close-button {
+    display: none !important;
+               opacity: 0 !important;
+}

@@ -1,0 +1,263 @@
+/* Rinfox Extras by ImSwordQueen & florin ********************************************************/
+/****************************************************************************************/
+
+:root {
+    --rinfox_extra_moremenus: 0; /* use rinfox.extra.moremenus to enable arrow menus to certain non menus icons */
+}
+
+/* RSS Reader */
+
+/* rss icon turning orange when there are badges*/
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP[badge] {
+    list-style-image: url('images/rss.png') !important;
+    filter: grayscale(0%) !important;
+}
+
+/* rss icon is black/white when no badges */
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP {
+    list-style-image: url('images/rss.png') !important;
+    filter: grayscale(100%) !important;
+}
+
+/* Remove Notification Badge */
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP .toolbarbutton-badge {
+   display: none !important;
+}
+}
+
+/* Adds menu arrow to RSS Feed */
+
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP:after
+{
+  display: inline-block !important;
+  content: '\75';
+  color: transparent !important;
+  font-family: 'Marlett' !important;
+  background-image: url('images/chevron-vista.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  transform: translateX(-1px) !important;
+}
+	
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP::after
+{
+  display: inline-block !important;
+  content: '\75';
+  color: transparent !important;
+  font-family: 'Marlett' !important;
+  background-image: url('images/chevron.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  transform: translateX(-1px) !important;
+}
+
+/* Add a proper folder icon (By NWinXP and travis for AeroFox) */
+
+.bookmark-item[container] {
+  list-style-image: none !important;
+}
+
+.bookmark-item[container][open="true"] .toolbarbutton-icon {
+	background-position-y: -16px !important;
+}
+
+.bookmark-item[container] .toolbarbutton-icon {
+	background-image: url('images/folder-item.png') !important;
+	background-position-x: -16px !important;
+}
+
+/* WIP CODE FOR XP FOLDER ICONS (TODO: Figure this out.)
+	@media not (-moz-platform: windows-win7), (-moz-platform: windows-win8) {
+@media (-moz-windows-compositor: 0) {
+ {
+.bookmark-item[container] .toolbarbutton-icon {
+	background-image: url('images/folder-item-xp.png') !important;
+	background-position-x: -16px !important;
+}
+	}
+
+}
+	}
+*/
+
+
+/* Replace "Library" with "Favorites" */ 
+
+#library-button > .toolbarbutton-text {
+  text-indent: -9999px !important;
+  line-height: -1 !important; /* Collapse the original line */
+  }
+  
+#library-button > .toolbarbutton-text::After {
+  content: "Favorites" !important;
+  text-indent: 0 !important;
+    display: flex !important;
+      background-color: transparent !important;
+  }
+
+
+/* Links Text */
+
+    @supports not -moz-bool-pref("rinfox.tweak.ie8") {
+		
+  #PlacesToolbarItems::before {
+	  
+	content: "Links" !important;
+	display: flex !important;
+	align-items: center !important;
+	position: relative !important;
+	margin-right: 3px !important;
+}
+
+	}
+
+/* Adds the menu arrow to items that aren't menus (via: rinfox.extra.moremenus ) */
+
+@supports -moz-bool-pref("rinfox.extra.moremenus") {
+#home-button::after,
+#print-button::after
+{
+  display: inline-block !important;
+  content: '\75';
+  color: transparent !important;
+  font-family: 'Marlett' !important;
+  background-image: url('images/chevron-vista.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  transform: translateX(-1px) !important;
+  margin-left: 5px;
+}
+	
+#home-button::after,
+#print-button::after
+{
+  display: inline-block !important;
+  content: '\75';
+  color: transparent !important;
+  font-family: 'Marlett' !important;
+  background-image: url('images/chevron.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  transform: translateX(-1px) !important;
+}
+
+	}
+
+/* Adding IE's purple chevron (yes it actually purple) instead of firefox one */
+
+/* Hiding the default image */
+#PlacesChevron, #nav-bar-overflow-button {
+   list-style-image: none !important;
+}
+
+/* Adding new one and position it */
+#PlacesChevron::before, #nav-bar-overflow-button::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("images/purplechevron.png");
+  background-repeat: no-repeat;
+  background-position: 8px top;
+  margin-right: -17px;
+  margin-left: 3px;
+
+}
+
+/* Added of bit of padding to make it more even for rss, email and home button */
+#home-button
+{
+  position: relative;
+  right: -1px;
+}
+
+#email-link-button
+{
+  position: relative;
+  right: 2px;
+}
+
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP {
+  position: relative;
+  left: 2px;
+}
+
+#print-button {
+  position: relative;
+  left: 2px;
+}
+
+
+/* Hides Bookmark Menu Button when IE8 mode and hides extension when IE7 mode */
+@supports not (-moz-bool-pref("rinfox.tweak.ie8")) {
+  #_2556b991-60fd-43ba-ae1a-ddc211a6a264_-BAP {
+    display: none !important;
+  }
+}
+
+
+@supports (-moz-bool-pref("rinfox.tweak.ie8")) {
+  #bookmarks-menu-button {
+    display: none !important;
+  }
+}
+
+/* Hide Separator in Bookmarks Panel when in IE7 mode */
+@supports not (-moz-bool-pref("rinfox.tweak.ie8")) {
+  #customizableui-special-separator42 {
+    display: none !important;
+  }
+}
+
+/* Make bookmarks panel smaller when in IE7 mode */
+
+@supports not (-moz-bool-pref("rinfox.tweak.ie8")) {
+  #PersonalToolbar {
+    height: 22px !important; 
+  }
+
+  #PersonalToolbar {
+    height: 24px;
+  }
+
+
+  #PersonalToolbar .toolbarbutton-icon {
+    margin-top: -5px;
+  }
+
+  #PersonalToolbar .toolbarbutton-icon:not([width="16"]):not([height="16"]) {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  #PersonalToolbar .bookmark-item[container] .toolbarbutton-icon {
+    background-image: url('images/bookfolder.png') !important;
+    background-size: 16px 16px !important;
+    background-position-x: -16px !important;
+
+  }
+
+  #PlacesToolbar .toolbarbutton-text {
+    margin-top: -6px !important;
+  } 
+}
+
+
+/* Stop Menu Bar poping up when it's disabled */
+#toolbar-menubar[autohide="true"] {
+    display: none !important;
+}
+
+@supports (-moz-bool-pref("rinfox.tweak.ie8")) {
+  #customizableui-special-separator42::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 26px;
+    background-color: #b8bbc8;
+    margin: 0 2px;
+    transform: scaleY(0.85);
+  }
+}
+
+

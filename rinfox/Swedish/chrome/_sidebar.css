@@ -1,0 +1,223 @@
+/* WIP Bookmark Sidebar */
+/* See Suggested Sites is just for show, unknown for now if it can be made to go somewhere */
+
+:root {
+  --rinfox.extra.searchbox: 0; /* use rinfox.extra.searchbox adds the Bookmark Searchbox - not a thing in IE but if needed for time-saving sake */
+}
+
+#sidebar {
+ min-width: 330px !important;
+ max-width: unset !important;
+ position: absolute;
+
+}
+
+#bookmarksPanel.sidebar-panel {
+    height: 97%; 
+}  
+
+#sidebar-box {
+    margin-top: 51px !important;
+    z-index: 1 !important;
+    background-color: #e3eefb !important;
+    min-width: 330px !important;
+    max-width: unset !important;
+    max-height: 80%;
+    overflow-y: hidden;
+    border: 1px solid #929195 !important;
+    border-radius: 4px !important;
+    border-left: none !important;
+    overflow: hidden;
+    position: fixed;
+    top: 10px;
+    height: 700px;
+    z-index: 1000;
+    background-image: linear-gradient(to top, #efedeb 0%, #E9F2FC 50%, #E3EEFB 50%) !important;
+}
+
+  @supports not -moz-bool-pref("rinfox.tweak.ie8") {
+ #sidebar-box {
+  background-image: linear-gradient(to top, #f0f0f0 0%, #f0f0f0 50%, #f3f7ff 50%) !important;
+  top: 38px;
+
+}
+ #bookmarksPanel.sidebar-panel {
+  height: 103%; 
+  margin-left: -1px;
+}
+ #sidebar-search-container {
+	display: none !important;
+}    
+}
+
+
+#bookmarksPanel.sidebar-panel::after {
+    content: "\00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0See Suggested Sites";
+    color: black;
+    margin-top: 5px;
+    margin-left: 16px;
+    background-image: url('images/blank-page.png');
+    background-size: 16px 16px; 
+    background-repeat: no-repeat; 
+    display: inline-block;
+    pointer-events: auto;
+    cursor: pointer
+}
+
+
+
+.sidebar-placesTree {
+	margin: 6px !important;
+	border: 1px solid #85878C !important;
+	background-color: #FFFFFF !important;
+  
+
+}
+
+#sidebar-switcher-target {
+    height: 24px !important;
+    font: Menu !important; 
+  
+    
+}
+
+@supports -moz-bool-pref("rinfox.tweak.ie8") {
+#sidebar-title::before {
+    content: "Add to Favorites...";
+    color: black; 
+    margin-left: -2px;
+    margin-right: 5px;
+  
+}
+}
+  
+@supports not -moz-bool-pref("rinfox.tweak.ie8") {
+#sidebar-title::before {
+    content: "Favorites"; 
+    color: black; 
+}
+  }
+
+
+#sidebar-title {
+    color: transparent;
+}
+
+@supports -moz-bool-pref("rinfox.tweak.ie8") {
+#sidebar-switcher-target::after
+{
+  display: inline-block !important;
+  content: '\75';
+  color: transparent !important;
+  font-family: 'Marlett' !important;
+  background-image: url('images/chevron-vista.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  transform: translateX(-1px) !important;
+  margin-left: -15px;
+  
+}
+
+}
+
+#sidebar-switcher-target:not(:active):not([open]):hover {
+	border-bottom-color: #D5D5D5 !important;
+  border: 1px solid #929195 !important;
+  border-radius: 4px !important;
+  background-image: transparent;
+  
+  
+}
+
+#sidebar-switcher-target:active,
+#sidebar-switcher-target[open] {
+	color: #FFFFFF !important;
+	background-color: #DCDCDC !important;
+	box-shadow: inset 0 -1px 1px #EAEAEA, inset 0 1px 1px #D8D8D8 !important;
+}
+
+#sidebar-switcher-target:active #sidebar-title,
+#sidebar-switcher-target[open] #sidebar-title {
+	border-right-color: #B5B5B5 !important;
+}
+
+#sidebar-title {
+	height: 100% !important;
+	border-right: 1px solid #E0DFE3 !important;
+	-moz-box-align: center !important;
+	padding-inline: 4px 8px !important;
+}
+
+#sidebar-switcher-arrow {
+	list-style-image: none !important;
+}
+
+#sidebar-icon {
+	width: 16px !important;
+	height: 16px !important;
+  filter: 
+  
+}
+
+#sidebar-header {
+	padding: 4px 6px !important;
+	border-bottom: 0 !important;
+  
+}
+@supports -moz-bool-pref("rinfox.tweak.ie8") {
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url('images/bookmarkfavorite.png') !important;
+}
+}
+
+@supports not -moz-bool-pref("rinfox.tweak.ie8") {
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url('images/favorites.png') !important;
+}
+}
+
+
+
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url('images/history-14.png') !important;
+}
+
+#sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+	list-style-image: url('sync-tabs-14.png') !important;
+}
+
+#sidebar-close {
+	width: 17px !important;
+	height: 16px !important;
+	list-style-image: none !important;
+	background-image: url('images/sidebarclose.png') !important;
+	background-color: transparent !important;
+	border-radius: 0 !important;
+}
+
+#sidebar-close:hover {
+	background-position-x: -15.7px !important;
+}
+
+#sidebar-close:active {
+	transform: translate(1px, 1px) !important;
+}
+
+#sidebar-search-container {
+	padding: 4px 6px !important;
+}
+
+
+@supports (-moz-bool-pref("rinfox.extra.searchbox")) {
+  #search-box {
+    display: block !important;
+  }
+}
+
+@supports not (-moz-bool-pref("rinfox.extra.searchbox")) {
+  #search-box {
+    display: none !important;
+  }
+}
+
+/* _____________________________________ */
