@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Internet Explorer</title>
+    <style>
+
+            body {
+                background-image: url("chrome://browser/skin/harmony/top.jpg");
+                background-repeat: repeat-x;
+                background-color: #FEFEFE;
+                font-family: "Segoe UI", sans-serif;
+                font-size: 80%;
+                margin: 0em;
+                padding: 0em;
+                width: 64em;
+            }
+            .title,
+            .expandsection,
+            .tasksection, 
+            .expando,
+            .icon,
+            .help,
+            .close
+            {
+                position: relative;
+            }
+            .title 
+            {
+                font: 445% Segoe UI;
+                color: #d8e2f4;
+                left: 4px;
+                margin:0; 
+                padding-bottom: .2em;
+            }
+            .tasksection,
+            .expandsection {
+                padding-bottom: 10px;
+            }
+            .column1
+            {
+                float: left;
+                width: 29em; 
+                padding-right: 1em;
+            }
+            .column2 
+            {
+	            float: left;
+	            width: 30em;
+            }
+            .mainContent,
+            .footer {
+	            padding-left: 38px;
+                    padding-right: 0px;
+            }
+            .footer {
+	            width:60em;
+	            float: left;
+	            padding-top: 5em;
+            }
+            .expandsection {
+                padding-top: 10px;
+            }
+            .expando {
+                top: 3px; 
+                padding-left: 3px;
+                border: none;
+            }
+            .close,
+            .icon,
+            .help {
+                top: 3px; 
+                margin-right: 5px;
+                border: none;
+                text-decoration: none;
+                outline: none;
+            }
+            .description,
+            .textcount
+            {
+                color: #505050;
+            }
+            .tasks {
+                font-size: 130%;
+                line-height:160%;
+                color: #549c00;
+                text-decoration: none;
+                outline: none;
+            }
+            hr {
+                margin: 0em 1.5em 1em 0em;
+                height: 1px;
+                border-top: 1px #C0C0C0 solid;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+            }
+            a {
+                color: #4F81BD;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .clipboard {
+                font-style: italic;
+                white-space: nowrap; 
+                overflow: hidden; 
+                height: 2em;
+            }
+            .clipboardViewer
+            {
+                float: left;
+                vertical-align: top;
+                width: 26em;
+            }
+            .clipboardViewerOpen
+            {
+                float: left;
+                vertical-align: top;
+                width: 40em;
+            }
+            .activitiesList
+            {
+                float: left;
+                vertical-align: top;
+                width: 26em;
+                padding-top: 1em;
+            }
+            .textcount {
+	            font-size: x-small;
+            }            
+            #recentlyClosedTabsExpando, 
+            #startInPrivateBrowsingClick, 
+            #activitiesExpando {
+                color: #549c00;
+            }
+			
+			#google,
+			#yahoo,
+			#msn,
+			#myspace {
+				margin-bottom: 15px;
+			}
+
+    </style>
+</head>
+</head>
+<body onload="initializePage();">
+    <div id="titleHeader" class="title">
+        Welcome to Internet Explorer 8
+    </div>
+
+    <div id="contentContainer" class="mainContent">
+        <div class="column1">
+            <div class="tasksection">
+                <a id="first" href="#" onclick="return false;">
+                    <span class="tasks">
+                        Faster and easier
+                    </span>
+                </a>
+                <br />
+                <span class="description">
+                    Fast, safe, and easy. Internet Explorer 8 takes the web experience beyond the page for quicker and more reliable browsing with peace of mind.
+                </span>
+				<br /> <br />
+                <a id="thingsdone">
+                    Get things done without navigating to other websites
+                </a>
+				<br /> <br />
+                <a id="browse">
+                    Browse and get things done quicker than ever
+                </a>
+				<br /> <br />
+                <a id="secure">
+                    Stay more secure and browse with confidence
+                </a>
+				<br /> <br />
+                <a id="accel">
+                    Accelerators for instant access to information
+                </a>
+				<br /> <br />
+                <a id="webslice">
+                    Web Slices to control your information
+                </a>
+				<br /> <br />
+                <a id="winharm">
+                    Built-in Windows Harmony
+                </a>
+				<br /> <br />				
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="tasksection" id="activitiesSection">
+                <a id="recentlyClosedTabsExpando" href="#" onclick="toggleExpandoLinks(); return false;">
+                    <span class="tasks">
+                        Suggested Sites
+                    </span>
+					<img id="SIglyph" alt="expand web service section" src="chrome://browser/skin/harmony/expand_nor.png" width="16" height="16" class="expando" />
+                </a>
+                <br />
+                <span id="activitiesDescription" class="description">
+                    Start your day with one of these useful sites.
+                </span>
+                <br /> <br />
+                <a class="expandoLink" id="google" href="https://oldgoogle.neocities.org/2009/" style="display:none;" onclick="https://oldgoogle.neocities.org/2009/" target="_blank">
+				<img src="chrome://browser/skin/harmony/googlefav.png" alt="googlefav" class="icon" />
+                    Google: Search Anything, Anywhere
+                </a>
+                <a class="expandoLink" id="yahoo" href="https://oldyahoo.neocities.org/2012-home" style="display:none;" onclick="https://oldyahoo.neocities.org/2012-home" target="_blank">
+				<img src="chrome://browser/skin/harmony/yahoofav.png" alt="yahoofav" class="icon" />
+                    Yahoo: Search, Shop and News
+                </a>
+                <a class="expandoLink" id="msn" href="https://2009msn.neocities.org/" style="display:none;" onclick="https://2009msn.neocities.org/" target="_blank">
+				<img src="chrome://browser/skin/harmony/msnfav.png" alt="msnfav" class="icon" />
+                    MSN: Keep In Touch with The World
+                </a>
+                <a class="expandoLink" id="myspace" href="https://spacehey.com/" style="display:none;" onclick="https://spacehey.com/" target="_blank">
+				<img src="chrome://browser/skin/harmony/myspacefav.png" alt="myspacefav" class="icon" />
+                    MySpace: Connect and Find New Friends
+                </a>
+				<div id="activitiesParkingElement" style="display:none">
+                    <!-- Accelerator's Factory's lifetime will be tied to the lifetime of this element -->
+                </div>
+                <div id="activitiesExpand" class="expandsection" style="display:none;">
+                    <div id="clipboardShowContainer">
+                        <div id="showClipboardContainer" class="clipboardViewer">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="footer">
+        <hr/>
+
+        <div id="help">
+            <a id="learnMore" href="https://support.mozilla.org/en-US/kb/tab-preferences-and-settings" onclick="https://support.mozilla.org/en-US/kb/tab-preferences-and-settings" target="_blank">
+				
+            </a>
+        </div>
+    </div>
+
+    <div id="prototypes" style="display:none" class="expandsection">
+
+        <div id="activityPrototype" style="white-space:nowrap; overflow:hidden;">
+            <a id="activityClick" href="#">
+                <img id="activityIcon" alt="DefaultActivityIcon" src="chrome://browser/skin/harmony/help_16.png" style="width:16px; height:16px;" class="icon"/>
+                <span id="activityTitle">
+                    Default Accelerator
+                </span>
+            </a>
+        </div>
+
+        <!-- Other prototypes remain unchanged -->
+
+    </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Get a reference to the "recentlyClosedTabsExpando" element
+  var expandoLink = document.getElementById("recentlyClosedTabsExpando");
+
+  // Get references to the elements with the class "expandoLink"
+  var expandoLinks = document.querySelectorAll(".expandoLink");
+
+  // Initially, hide all elements with class "expandoLink"
+  for (var i = 0; i < expandoLinks.length; i++) {
+    expandoLinks[i].style.display = "none";
+  }
+
+  // Add a click event listener to the "recentlyClosedTabsExpando" element
+  expandoLink.addEventListener("click", function () {
+    // Toggle the visibility of elements with class "expandoLink"
+    for (var i = 0; i < expandoLinks.length; i++) {
+      if (expandoLinks[i].style.display === "none") {
+        expandoLinks[i].style.display = "block";
+      } else {
+        expandoLinks[i].style.display = "none";
+      }
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>

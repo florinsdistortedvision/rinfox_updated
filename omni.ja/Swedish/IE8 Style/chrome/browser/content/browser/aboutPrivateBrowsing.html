@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <head>
+        <meta http-equiv="Content-Language" content="en-us" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+        <title>InPrivate</title>
+         <style type="text/css">
+            body {
+                background-image: url("chrome://browser/skin/harmony/top.jpg");
+                background-repeat: repeat-x;
+                background-color: #FEFEFE;
+                font-family: "Segoe UI";
+                font-size: 80%;
+                margin: 0em;
+                padding: 1em;
+                width: 70em;
+            }
+            .title,
+            .expandsection,
+            .tasksection, 
+            .expando,
+            .icon,
+            .help,
+            .close
+            {
+                position: relative;
+            }
+            .title 
+            {
+                font: 445% Segoe UI;
+                color: #d8e2f4;                
+                left: 4px;
+                margin:0;
+                margin-right: 5px;
+                padding-bottom: .2em;
+            }
+            .tasksection,
+            .expandsection {
+                padding-bottom: 10px;
+            }
+            .column1
+            {
+                width: 35em;
+                margin-right: 5px;
+            }
+            .mainContent,
+            .footer {
+                padding-left: 35px;
+            }
+            .footer {
+                width:65em;
+                float: left;
+                padding-top: 1em;
+            }
+            .tasksection 
+            {
+                min-width: 500px;
+            }
+            .expandsection {
+                padding-top: 10px;
+            }
+            .close,
+            .icon,
+            .help {
+                top: 3px; 
+                margin-right: 5px;
+                border: none;
+                text-decoration: none;
+                outline: none;
+            }
+            .description,
+            .textcount
+            {
+                color: #505050;
+            }
+            .tasks {
+                font-size: 130%;
+                line-height:160%;
+                color: #549c00;
+                text-decoration: none;
+                outline: none;
+            }
+            hr {
+                margin: 0em 1.5em 1em 0em;
+                height: 1px;
+                border-top: 1px #C0C0C0 solid;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+            }
+            a {
+                color: #4F81BD;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+			.help-image {
+				margin-right: 5px; /* Adjust the value to set the desired space */
+			}
+        </style>
+    </head>
+    <body id="InPrivate">
+        <div id="titleHeader" class="title">InPrivate is turned on</div>
+        <div id="contentContainer" class ="mainContent">
+            <div class="column1">
+                <div class="tasksection">
+                    <div id="contentHeader" class="tasks">When InPrivate Browsing is turned on, you will see this indicator </div>
+                    <p><img id="inPrivateImage" alt="InPrivate in the address bar" src="chrome://browser/skin/harmony/inprivate.png" /></p>
+                    <span id="recentlyClosedTabsDescription" class="description">
+                        <p>&nbsp;</p>
+                        <p id="contentLine1"><i>InPrivate Browsing</i> helps prevent Internet Explorer from storing data about your browsing session. This includes cookies, temporary Internet files, history, and other data. Toolbars and extensions are disabled by default. See Help for more information.</p>
+                        <p id="contentLine2">To turn off InPrivate Browsing, close this browser window.</p>
+                    </span>
+                </div>
+            </div>    
+        </div>     
+        <div class="footer">
+            <hr/>
+            <div id="help">
+			<img src="chrome://browser/skin/harmony/help_16.png" alt="help-image" class="help-image">
+                <a id="learnMore" href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history" onclick="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history" onmouseup="return false;">Learn more about InPrivate Browsing</a>&nbsp;|&nbsp;<a id="privacystatement" href="https://www.mozilla.org/en-US/privacy/firefox/">Read the Internet Explorer privacy statement online</a>
+            </div>
+        </div>
+    </body>
+</html>

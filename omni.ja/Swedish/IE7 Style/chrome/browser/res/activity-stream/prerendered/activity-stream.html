@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Segoe UI", "verdana", "arial";
+            background-image: url("chrome://browser/skin/harmony/background_gradient.jpg");
+            background-repeat: repeat-x;
+            background-color: #E8EAEF;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #575757;
+        }
+
+        body.securityError {
+            font-family: "Segoe UI", "verdana" , "Arial";
+            background-image: url("background_gradient_red.jpg");
+            background-repeat: repeat-x;
+            background-color: #E8EAEF;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        body.tabInfo {
+            background-image: none;
+            background-color: #F4F4F4;
+        }
+
+        a {
+            color: rgb(19,112,171);
+            font-size: 1em;
+            font-weight: normal;
+            text-decoration: none;
+            margin-left: 0px;
+            vertical-align: top;
+        }
+
+        a:link, a:visited {
+            color: rgb(19,112,171);
+            text-decoration: none;
+            vertical-align: top;
+        }
+
+        a:hover {
+            color: rgb(7,74,229);
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        h1 {
+            color: #4465A2;
+            font-size: 1.1em;
+            font-weight: normal;
+            vertical-align: bottom;
+            margin-top: 7px;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        h3 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 10px;
+            margin-bottom: 1px;
+        }
+
+        h4 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 12px;
+            margin-bottom: 1px;
+        }
+
+        h5 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-bottom: 0px;
+            margin-top: 1px;
+            font-size: 0.9em;
+            color: #575757;
+        }
+
+        .actionIcon {
+            vertical-align: middle;
+            margin-top: 0px;
+            margin-right: 6px;
+        }
+
+        .infoBlock {
+            padding-left: 25px;
+            font-size: 0.9em;
+            display: block;
+            line-height: 1.1em;
+            color: #575757;
+        }
+
+        .errorCodeAndDivider {
+            font-size: 0.7em;
+            font-weight: normal;
+            color: #787878;
+        }
+
+        ul, ol {
+            font-size: 0.9em;
+            list-style-position: outside;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            line-height: 1.3em;
+        }
+
+        .divider {
+            border-bottom: #B6BCC6 1px solid;
+        }
+    </style>
+</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="chrome://browser/skin/harmony/ErrorPageTemplate.css">
+		
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Welcome to Internet Explorer</title>
+
+        <script src="chrome://browser/skin/harmony/errorPageStrings.js"></script>
+		
+        <script src="chrome://browser/skin/harmony/httpErrorPagesScripts.js"></script>
+    </head>
+
+        <table width="730" cellpadding="0" cellspacing="0" border="0">
+
+        <!-- Welcome title -->
+            <tr>
+                <td id="infoIconAlign" width="60" align="left" valign="top" rowspan="2">
+                    <img src="chrome://browser/skin/harmony/ie.png" id="infoIcon" alt="Info icon">
+                </td>
+                <td id="mainTitleAlign" valign="middle" align="left" width="*">
+                    <h1 id="mainTitle">Welcome to Internet Explorer</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <!-- This row is for HTTP status code, as well as the divider-->
+                <td id="errorCodeAlign" class="errorCodeAndDivider" align="right">&nbsp;
+                    <div class="divider"></div>
+                </td>
+            </tr>
+
+
+        <!-- Features Body -->
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td id="MostLikelyAlign" valign="top" align="left">
+                    <h3 id="likelyCauses">Internet Explorer 7 provides improved navigation through tabbed browsing, web search right from the toolbar, advanced printing, easy discovery, reading and subscription to RSS feeds, and much more:</h3>
+                    <ul>
+                        <li id="causeNotConnected">Tabbed browsing</li>
+                        <li id="causeSiteProblem">Quick Tabs</li>
+                        <li id="causeErrorInAddress">Tab Groups</li>
+						<li id="causestream">Streamlined interface</li>
+						<li id="causeinstant">Instant Search box</li>
+						<li id="causefav">Favorites Center</li>
+						<li id="causerss">Built-in Windows Harmony</li>
+                    </ul>
+                </td>
+            </tr>
+
+        <!-- What you can do -->
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td id="whatToTryAlign" valign="top" align="left">
+                    <h2 id="whatToTry">What you can try:</h2>
+                </td>
+            </tr>
+
+        <!-- Links -->
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="google" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <img src="chrome://browser/skin/harmony/googlefav.png" border="0" alt="" class="actionIcon">
+                                </td>
+                                <td valign="top">
+									<a href="https://oldgoogle.neocities.org/2009/"><ID id="oldgoogle">Do a Google Search</ID></a>
+                            </tr>
+                        </table>
+                    </h4>
+                </td>
+            </tr>
+			
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="yahoo" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <img src="chrome://browser/skin/harmony/yahoofav.png" border="0" alt="" class="actionIcon">
+                                </td>
+                                <td valign="top">
+									<a href="https://oldyahoo.neocities.org/2012-home"><ID id="oldyahoo">Do a Yahoo Search</ID></a>
+                            </tr>
+                        </table>
+                    </h4>
+                </td>
+            </tr>
+			
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="msn" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <img src="chrome://browser/skin/harmony/msnfav.png" border="0" alt="" class="actionIcon">
+                                </td>
+                                <td valign="top">
+									<a href="https://2009msn.neocities.org/"><ID id="oldmsn">Start your day with MSN</ID></a>
+                            </tr>
+                        </table>
+                    </h4>
+                </td>
+            </tr>
+			
+            <tr>
+                <td >
+                    &nbsp;
+                </td>
+                <td id="myspace" align="left" valign="middle">
+                    <h4>
+                        <table>
+                            <tr>
+                                <td valign="top">
+                                    <img src="chrome://browser/skin/harmony/myspacefav.png" border="0" alt="" class="actionIcon">
+                                </td>
+                                <td valign="top">
+									<a href="https://spacehey.com/"><ID id="oldmsn">Find new friends on MySpace</ID></a>
+                            </tr>
+                        </table>
+                    </h4>
+                </td>
+            </tr>
+
+        </table>
+
+    </body>
+</html>

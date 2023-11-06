@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Tab Page</title>
+    <style>
+
+            body {
+                background-image: url("chrome://browser/skin/harmony/top.jpg");
+                background-repeat: repeat-x;
+                background-color: #FEFEFE;
+                font-family: "Segoe UI", sans-serif;
+                font-size: 80%;
+                margin: 0em;
+                padding: 0em;
+                width: 64em;
+            }
+            .title,
+            .expandsection,
+            .tasksection, 
+            .expando,
+            .icon,
+            .help,
+            .close
+            {
+                position: relative;
+            }
+            .title 
+            {
+                font: 445% Segoe UI;
+                color: #d8e2f4;
+                left: 4px;
+                margin:0; 
+                padding-bottom: .2em;
+            }
+            .tasksection,
+            .expandsection {
+                padding-bottom: 10px;
+            }
+            .column1
+            {
+                float: left;
+                width: 29em; 
+                padding-right: 1em;
+            }
+            .column2 
+            {
+	            float: left;
+	            width: 30em;
+            }
+            .mainContent,
+            .footer {
+	            padding-left: 38px;
+                    padding-right: 0px;
+            }
+            .footer {
+	            width:60em;
+	            float: left;
+	            padding-top: 5em;
+            }
+            .expandsection {
+                padding-top: 10px;
+            }
+            .expando {
+                top: 3px; 
+                padding-left: 3px;
+                border: none;
+            }
+            .close,
+            .icon,
+            .help {
+                top: 3px; 
+                margin-right: 5px;
+                border: none;
+                text-decoration: none;
+                outline: none;
+            }
+            .description,
+            .textcount
+            {
+                color: #505050;
+            }
+            .tasks {
+                font-size: 130%;
+                line-height:160%;
+                color: #549c00;
+                text-decoration: none;
+                outline: none;
+            }
+            hr {
+                margin: 0em 1.5em 1em 0em;
+                height: 1px;
+                border-top: 1px #C0C0C0 solid;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+            }
+            a {
+                color: #4F81BD;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .clipboard {
+                font-style: italic;
+                white-space: nowrap; 
+                overflow: hidden; 
+                height: 2em;
+            }
+            .clipboardViewer
+            {
+                float: left;
+                vertical-align: top;
+                width: 26em;
+            }
+            .clipboardViewerOpen
+            {
+                float: left;
+                vertical-align: top;
+                width: 40em;
+            }
+            .activitiesList
+            {
+                float: left;
+                vertical-align: top;
+                width: 26em;
+                padding-top: 1em;
+            }
+            .textcount {
+	            font-size: x-small;
+            }            
+            #recentlyClosedTabsExpando, 
+            #startInPrivateBrowsingClick, 
+            #activitiesExpando {
+                color: #549c00;
+            }
+            
+    </style>
+</head>
+</head>
+<body onload="initializePage();">
+    <div id="titleHeader" class="title">
+        What do you want to do next?
+    </div>
+
+    <div id="contentContainer" class="mainContent">
+        <div class="column1">
+            <div class="tasksection">
+                <a id="recentlyClosedTabsExpando" href="#" onclick="showAllExpandoLinks(); return false;">
+                    <span class="tasks">
+                        Reopen closed tabs
+                    </span>
+                    <img id="tabglyph" alt="expand closed tabs section" src="chrome://browser/skin/harmony/expand_nor.png" width="16" height="16" class="expando" />
+                </a>
+                <br />
+                <span class="description">
+                    View tabs that you've closed since starting Internet Explorer.
+                </span>
+				<br /> <br />
+                <a class="expandoLink" id="seeHistory" href="https://support.mozilla.org/en-US/kb/browsing-history-firefox" target="_blank" style="display:none;" rel="noopener noreferrer">
+                    See Your History
+                </a>
+				<br /> <br />
+                <a class="expandoLink" id="seeBookmarks" href="https://support.mozilla.org/en-US/kb/bookmarks-firefox" target="_blank" style="display:none;" rel="noopener noreferrer">
+                    See Your Bookmarks
+                </a>
+				<br /> <br />
+                <a class="expandoLink" id="lastSession" href="https://support.mozilla.org/en-US/kb/how-do-i-restore-my-tabs-last-time" target="_blank" style="display:none;" rel="noopener noreferrer">
+                    Reopen Your Last Browsing Session
+                </a>
+				<br /> <br />			
+            </div>
+        </div>
+
+        <div class="column2">
+            <div class="tasksection" id="inPrivateSection">
+                <a id="startInPrivateBrowsingClick" href="#" onclick="startInPrivateBrowsing(); return false;">
+                    <span class="tasks">
+                        Browse with InPrivate
+                    </span>
+                </a>
+                <br />
+                <span class="description">
+                    Browse the web without storing data about your browsing session.
+                </span>
+                <br /> <br />
+                <a id="startInPrivateBrowsingLinkClick" href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history" target="_blank">
+                    Open an InPrivate Browsing window
+                </a>
+                <br /> <br />
+            </div>
+
+            <div class="tasksection" id="activitiesSection">
+                <a id="activitiesExpando" href="#" onclick="showClipboard(); return false;">
+                    <span class="tasks">
+                        Use an Accelerator
+                    </span>
+                    <img id="SIglyph" alt="expand web service section" src="chrome://browser/skin/harmony/expand_nor.png" width="16" height="16" class="expando" />
+                </a>
+                <br />
+                <span id="activitiesDescription" class="description">
+                    Open a web service with text that you've copied from a webpage.
+                </span>
+                <br />
+                <br /> <!-- Line break added for spacing -->
+                <a id="showClipboardClick" href="#" style="display:none;">
+                    Show copied text
+                </a>
+                <br /> <br />
+                <a class="acceleratorLink" id="link1" href="https://web.archive.org/web/20090727120906/http://home.spaces.live.com/" style="display:none;" onclick="https://web.archive.org/web/20090727120906/http://home.spaces.live.com/" target="_blank">
+                    <img src="chrome://browser/skin/harmony/blog.png" alt="Blog" class="icon" />
+                    Blog with Windows Live
+                </a>
+                <a class="acceleratorLink" id="link2" href="https://www.bing.com/maps" style="display:none;" onclick="https://www.bing.com/maps" target="_blank">
+                    <img src="chrome://browser/skin/harmony/maps.png" alt="Maps" class="icon" />
+                    Map with Bing
+                </a>
+                <a class="acceleratorLink" id="link3" href="https://www.bing.com/" style="display:none;" onclick="https://www.bing.com/" target="_blank">
+                    <img src="chrome://browser/skin/harmony/bing.png" alt="Bing" class="icon" />
+                    Search with Bing
+                </a>
+                <a class="acceleratorLink" id="link4" href="https://www.bing.com/translator" style="display:none;" onclick="https://www.bing.com/translator" target="_blank">
+                    <img src="chrome://browser/skin/harmony/translate.png" alt="Translate" class="icon" />
+                    Translate with Bing
+                </a>
+                <br /> <br />
+                <div id="activitiesParkingElement" style="display:none">
+                    <!-- Accelerator's Factory's lifetime will be tied to the lifetime of this element -->
+                </div>
+                <div id="activitiesExpand" class="expandsection" style="display:none;">
+                    <div id="clipboardShowContainer">
+                        <div id="showClipboardContainer" class="clipboardViewer">
+                        </div>
+                    </div>
+
+                    <div id="clipboardTextContainer" style="display:none">
+                        <div id="clipboardTextColumn" class="clipboardViewerOpen">
+                            <div>
+                                <span id="useThisText">
+                                    Use this text: &nbsp;
+                                </span>
+
+                                <span id="clipboardText" class="clipboard" style="display:none; padding-right:2em;">
+                                </span>
+                                <a id="clipboardCloseClick" href="#" onclick="hideClipboard(); return false;">
+                                    <img id="clipboardCloseImage" alt="Hide Clipboard" src="chrome://browser/skin/harmony/close_nor.png" width="16" height="16" class="close"/>
+                                </a>
+                            </div>
+                            <div id="clipboardTextStatsContainer" style="display:none;">
+                                <!-- (Showing the first xx of yyy characters in the Clipboard) -->
+                                <span id="clipboardTextStats" class="textcount">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id ="activitiesLeft" class="activitiesList">
+                        <!-- Accelerators will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="footer">
+        <hr/>
+
+        <div id="help">
+            <a id="learnMore" href="https://support.mozilla.org/en-US/kb/tab-preferences-and-settings" onclick="https://support.mozilla.org/en-US/kb/tab-preferences-and-settings" target="_blank">
+                <img src="chrome://browser/skin/harmony/help_16.png" alt="help" class="icon" />
+				Learn more about tabs and tab shortcuts, Accelerators, and InPrivate Browsing
+            </a>
+        </div>
+    </div>
+
+    <div id="prototypes" style="display:none" class="expandsection">
+
+        <div id="activityPrototype" style="white-space:nowrap; overflow:hidden;">
+            <a id="activityClick" href="#">
+                <img id="activityIcon" alt="DefaultActivityIcon" src="chrome://browser/skin/harmony/help_16.png" style="width:16px; height:16px;" class="icon"/>
+                <span id="activityTitle">
+                    Default Accelerator
+                </span>
+            </a>
+        </div>
+
+        <!-- Other prototypes remain unchanged -->
+
+    </div>
+
+    <script>
+        // JavaScript functions go here
+        function initializePage() {
+            // Code to initialize the page when it loads
+            hideClipboard(); // Hide "Show copied text" and accelerator links on page load
+        }
+
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+		
+		function toggleExpandoLinks() {
+			var expandoLinks = document.getElementsByClassName('expandoLink');
+			for (var i = 0; i < expandoLinks.length; i++) {
+				if (expandoLinks[i].style.display === 'none' || expandoLinks[i].style.display === '') {
+					expandoLinks[i].style.display = 'block';
+				} else {
+					expandoLinks[i].style.display = 'none';
+				}
+			}
+		}
+
+		// Add an event listener to the "recentlyClosedTabsExpando" element
+		var recentlyClosedTabsExpando = document.getElementById('recentlyClosedTabsExpando');
+			recentlyClosedTabsExpando.addEventListener("click", function() {
+			toggleExpandoLinks(); // Call the function to toggle the visibility of expandoLinks
+		});
+	
+		
+        function showClipboard() {
+            var clipboardLink = document.getElementById('showClipboardClick');
+            var acceleratorLinks = document.getElementsByClassName('acceleratorLink');
+
+            if (clipboardLink.style.display === 'none' || clipboardLink.style.display === '') {
+                clipboardLink.style.display = 'block';
+                for (var i = 0; i < acceleratorLinks.length; i++) {
+                    acceleratorLinks[i].style.display = 'block';
+                }
+            } else {
+                clipboardLink.style.display = 'none';
+                for (var i = 0; i < acceleratorLinks.length; i++) {
+                    acceleratorLinks[i].style.display = 'none';
+                }
+            }
+			toggleClipboardText();
+        }
+
+		const changeText = document.querySelector("#showClipboardClick");
+        let originalText = changeText.textContent; // Store the original text
+
+        changeText.addEventListener("click", function() {
+            if (changeText.textContent === originalText) {
+                changeText.textContent = "Try pressing Windows key and V combined to see your clipboard";
+            } else {
+                changeText.textContent = originalText;
+            }
+        });
+		
+        function hideClipboard() {
+            var clipboardLink = document.getElementById('showClipboardClick');
+            var acceleratorLinks = document.getElementsByClassName('acceleratorLink');
+
+            clipboardLink.style.display = 'none';
+            for (var i = 0; i < acceleratorLinks.length; i++) {
+                acceleratorLinks[i].style.display = 'none';
+            }
+			toggleClipboardText()
+        }
+		
+        function performAction(actionNumber) {
+            // Code to perform different actions based on the selected link
+        }
+
+        // Other JavaScript functions remain unchanged
+
+    </script>
+</body>
+</html>

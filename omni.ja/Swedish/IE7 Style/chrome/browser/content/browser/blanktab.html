@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Segoe UI", "verdana", "arial";
+            background-image: url("chrome://browser/skin/harmony/background_gradient.jpg");
+            background-repeat: repeat-x;
+            background-color: #E8EAEF;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #575757;
+        }
+
+        body.securityError {
+            font-family: "Segoe UI", "verdana" , "Arial";
+            background-image: url("background_gradient_red.jpg");
+            background-repeat: repeat-x;
+            background-color: #E8EAEF;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        body.tabInfo {
+            background-image: none;
+            background-color: #F4F4F4;
+        }
+
+        a {
+            color: rgb(19,112,171);
+            font-size: 1em;
+            font-weight: normal;
+            text-decoration: none;
+            margin-left: 0px;
+            vertical-align: top;
+        }
+
+        a:link, a:visited {
+            color: rgb(19,112,171);
+            text-decoration: none;
+            vertical-align: top;
+        }
+
+        a:hover {
+            color: rgb(7,74,229);
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        h1 {
+            color: #4465A2;
+            font-size: 1.1em;
+            font-weight: normal;
+            vertical-align: bottom;
+            margin-top: 7px;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        h3 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 10px;
+            margin-bottom: 1px;
+        }
+
+        h4 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 12px;
+            margin-bottom: 1px;
+        }
+
+        h5 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-bottom: 0px;
+            margin-top: 1px;
+            font-size: 0.9em;
+            color: #575757;
+        }
+
+        .actionIcon {
+            vertical-align: middle;
+            margin-top: 0px;
+            margin-right: 6px;
+        }
+
+        .infoBlock {
+            padding-left: 25px;
+            font-size: 0.9em;
+            display: block;
+            line-height: 1.1em;
+            color: #575757;
+        }
+
+        .errorCodeAndDivider {
+            font-size: 0.7em;
+            font-weight: normal;
+            color: #787878;
+        }
+
+        ul, ol {
+            font-size: 0.9em;
+            list-style-position: outside;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            line-height: 1.3em;
+        }
+
+        .divider {
+            border-bottom: #B6BCC6 1px solid;
+        }
+    </style>
+</head>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="chrome://browser/skin/harmony/ErrorPageTemplate.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Welcome to Tabbed Browsing</title>
+        <script src="chrome://browser/skin/harmony/errorPageStrings.js" language="javascript" type="text/javascript">
+        </script>
+        <script src="chrome://browser/skin/harmony/httpErrorPagesScripts.js" language="javascript" type="text/javascript">
+        </script>
+    </head>
+
+    <body onLoad="javascript:setTabInfo('tabInfoBlockID');" class="tabInfo">
+
+        <table width="730" cellpadding="0" cellspacing="0" border="0">
+
+            <tr>
+                <td id="tabIconAlign" width="60" align="left" valign="top" rowspan="2">
+                    <img src="chrome://browser/skin/harmony/tab_icon.png" id="tabIcon" alt="Tab icon">
+                </td>
+                <td id="mainTitleAlign" valign="middle" align="left" width="*">
+                    <h1 id="mainTitle">You've opened a new tab</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="ErrorCodeAlign" class="errorCodeAndDivider" align="right">&nbsp;
+                    <div class="divider"></div>
+                </td>
+            </tr>
+
+          <tr>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              <p><h2 id="withTabs1">With tabs you can:</h2>
+              <ul>
+                <li id="withTabs2">Use one Internet Explorer window to view all your webpages.</li>
+                <li id="withTabs3">Open links in a background tab while viewing the page you're on.</li>
+                <li id="withTabs4">Save and open multiple webpages at once by using favorites and home page tabs.</li>
+              </ul>
+              </p>
+
+              <p><h2 id="getStarted1">To get started:</h2>
+              <ul>
+                <li id="getStarted2">Press the CTRL key while clicking links (or use the middle mouse button).</li>
+                <li id="getStarted3">Click any tab with the middle mouse button to close it.</li>
+                <li id="getStarted4">Press ALT+ENTER from the address bar or search box to open the result in a new tab.</li>
+              </ul>
+              </p>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                  &nbsp;
+              </td>
+              <td>
+                  <p>
+                      <table>
+                        <tr>
+                            <td valign="top">
+                                <img src="chrome://browser/skin/harmony/help.gif" id="helpIcon" border="0" alt="Help Icon" class="actionIcon">
+                            </td>
+                            <td valign="top">
+                                <a href="https://support.mozilla.org/en-US/kb/tab-preferences-and-settings"><ID id="learnMoreAboutTabs">Learn more about tabs</ID></a>
+                            </td>
+                        </tr>
+                      </table>
+                  </p>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                 &nbsp;
+              </td>
+              <td>
+                 <div class="divider"></div>
+              </tr>
+          </tr>
+          <tr>
+              <td>
+                  &nbsp;
+              </td>
+              <td>
+                  <p>
+                    <table width="100%">
+                        <tr>
+                            <form name="skipTabFrom" onSubmit="javascript:skipTabCheck(document.skipTabFrom);" action="javascript:window.location.replace('about:blank')">
+                              <td>
+                                <input type="checkbox" name="skipTabCheckbox" id="dontShowPage">
+                                <label for="dontShowPage" id="dontShowPageText">Don't show this page again</label>
+                              </td>
+                              <td align="right">
+                                  <button id="closeButtonStyle" type="submit" style="width: 6.5em;"><ID id="closeButtonText">Close</ID></button>
+                              </td>
+                            </form>
+                        </tr>
+                    </table>
+                  </p>
+              </td>
+          </tr>
+        </table>
+    </body>
+</html>
