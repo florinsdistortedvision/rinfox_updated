@@ -22,6 +22,8 @@ aboutDialog.setAttribute("title", ""+aboutDialogTitle+"");
 
 // createElement because xhtml is dogshit 
 
+// Jag håller fan med kan jag säga
+
 // Windows Internet Explorer Banner
 const aboutboxbanner = document.createElement("img");
 let bannersrc;
@@ -45,14 +47,14 @@ let aboutboxinfoid;
 let aboutboxinfoupdate;
 if (isIE8Enabled) {
 	aboutboxinfoversion = "Version: 8.0.6001.18702";
-	aboutboxinfostregnth = "Cipher Strength: 256-bit";
-	aboutboxinfoid = "Product ID: 01404-014-0000025-714000";
-	aboutboxinfoupdate = "Update Versions: 0";
+	aboutboxinfostregnth = "Cipher Styrka: 256-bit";
+	aboutboxinfoid = "Produkt ID: 01404-014-0000025-714000";
+	aboutboxinfoupdate = "Updateringsversioner: 0";
 } else {
 	aboutboxinfoversion = "Version: 7.0.6002.18005";
-	aboutboxinfostregnth = "Cipher Strength: 256-bit";
-	aboutboxinfoid = "Product ID: 89580-014-0000025-71495";
-	aboutboxinfoupdate = "Update Versions:0";
+	aboutboxinfostregnth = "Cipher Styrka: 256-bit";
+	aboutboxinfoid = "Produkt ID: 89580-014-0000025-71495";
+	aboutboxinfoupdate = "Updateringsversioner:0";
 }
 const aboutboxinfo = [
 	""+aboutboxinfoversion+"", 
