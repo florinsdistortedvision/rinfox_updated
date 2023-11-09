@@ -80,8 +80,8 @@ try {
       id: "bookmarks-menu-button", // button id
       defaultArea: CustomizableUI.AREA_NAVBAR,
       removable: true,
-      label: "Bookmarks Menu",
-      tooltiptext: "Add to Favorites Bar", // Tooltip label
+      label: "Fältet Favoriter",
+      tooltiptext: "Lägg till i fältet Favoriter", // Tooltip label
       type: "menu-button",
       onCommand: function(event) {
         if (event.target.id === "bookmarks-menu-button") {

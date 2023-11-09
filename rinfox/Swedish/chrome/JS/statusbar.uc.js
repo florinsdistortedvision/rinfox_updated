@@ -5,9 +5,9 @@ window.addEventListener("load", function() {
   const newElementButton = document.createElement('customtoolbarbutton');
 
   newElementDiv.classList.add('internet-options');
-  newElementDiv.setAttribute('tooltiptext', 'Double-click to see page security settings');
+  newElementDiv.setAttribute('tooltiptext', 'Dubbelklicka om du vill ändra säkerhetsinställningar');
   newElementButton.classList.add('zoom-button');
-  newElementButton.setAttribute('tooltiptext', 'Change zoom level');
+  newElementButton.setAttribute('tooltiptext', 'Ändra zoomnivå');
 
   newElementDiv.addEventListener('dblclick', function() {
     BrowserPageInfo();
@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
 
   const securityButton = document.createElement('customtoolbarbutton');
   securityButton.classList.add('security-button');
-  securityButton.setAttribute('tooltiptext', 'InPrivate Filtering');
+  securityButton.setAttribute('tooltiptext', 'InPrivate-Filtrering');
   securityButton.style.filter = 'saturate(0)';
 
   securityButton.addEventListener('click', function() {

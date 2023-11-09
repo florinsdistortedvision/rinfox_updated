@@ -9,7 +9,7 @@
 // Mozilla Firefox's window name (e.g. Example - Windows Internet Explorer)
 var TitlebarText = "Windows Internet Explorer"; 
 // Private Browsing's label (e.g. Example - Windows Internet Explorer [InPrivate]
-var PrivateBrowsingLabel = "[InPrivate]"; 
+var PrivateBrowsingLabel = " - [InPrivate]";
 
 
 var ReplaceFirefoxTitlebar = {
