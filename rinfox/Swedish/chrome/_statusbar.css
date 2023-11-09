@@ -52,7 +52,7 @@
 }
 
 .internet-options::after {
-    content: "Internet | Protected Mode: On";
+    content: "Internet | Skyddat Läge: På";
     padding-left: 5px;
     padding-right: 66px;
     
