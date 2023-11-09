@@ -160,4 +160,4 @@ Want to follow the latest developments, translations and bug fixes of rinFox? Jo
 * English - me (florin)
 * Romanian - me (florin)
 * Spanish - [luisl173](https://github.com/florinsdistortedvision/rinfox_updated/pull/1)
-* Swedish - [kokkermanz](https://github.com/florinsdistortedvision/rinfox_updated/pull/7)
+* Swedish - [kokkermanz](https://github.com/florinsdistortedvision/rinfox_updated/pull/9)
