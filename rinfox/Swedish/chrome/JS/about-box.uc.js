@@ -14,7 +14,7 @@ function setAttributes(element, attributes) {
 }
 
 // Title of About Window
-var aboutDialogTitle = "About Internet Explorer";
+var aboutDialogTitle = "Om Internet Explorer";
 
 const isIE8Enabled = getComputedStyle(document.documentElement).getPropertyValue('--rinfox_tweak_ie8') == 1;
 
@@ -47,14 +47,14 @@ let aboutboxinfoid;
 let aboutboxinfoupdate;
 if (isIE8Enabled) {
 	aboutboxinfoversion = "Version: 8.0.6001.18702";
-	aboutboxinfostregnth = "Cipher Styrka: 256-bit";
-	aboutboxinfoid = "Produkt ID: 01404-014-0000025-714000";
-	aboutboxinfoupdate = "Updateringsversioner: 0";
+	aboutboxinfostregnth = "Kryptering: 256-bitars";
+	aboutboxinfoid = "Produkt-ID: 01404-014-0000025-714000";
+	aboutboxinfoupdate = "Updateringar: 0";
 } else {
 	aboutboxinfoversion = "Version: 7.0.6002.18005";
-	aboutboxinfostregnth = "Cipher Styrka: 256-bit";
-	aboutboxinfoid = "Produkt ID: 89580-014-0000025-71495";
-	aboutboxinfoupdate = "Updateringsversioner:0";
+	aboutboxinfostregnth = "Kryptering: 256-bitars";
+	aboutboxinfoid = "Produkt-ID: 89580-014-0000025-71495";
+	aboutboxinfoupdate = "Updateringar:0";
 }
 const aboutboxinfo = [
 	""+aboutboxinfoversion+"", 
@@ -71,7 +71,7 @@ for (i = 0; i <= aboutboxinfo.length - 1; i++) {
 
 // Text Area Legal Notice
 const legalnotice = document.createElement('textarea');
-const legalnoticestring = document.createTextNode("Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.");
+const legalnoticestring = document.createTextNode("Varning! Programmet är skyddat av svensk och internationell upphovsrättslagstiftning samt av internationella konventioner. Otillåten kopiering eller distribution av detta program, eller delar av det, kommer att beivras och kan förutom skadeståndsskyldighet medföra böter eller fängelse.");
 legalnotice.appendChild(legalnoticestring);
 
 
