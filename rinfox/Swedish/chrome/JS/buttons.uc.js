@@ -38,7 +38,7 @@ try {
 
 (function() {
   try {
-    var button_label = "View favorites, feeds, and history";
+    var button_label = "Visa favoriter, feeds, och historik";
 
     CustomizableUI.createWidget({
       id: "library-button",

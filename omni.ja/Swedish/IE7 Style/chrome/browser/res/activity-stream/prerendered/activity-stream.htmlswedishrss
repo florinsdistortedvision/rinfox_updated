@@ -127,11 +127,11 @@
     <head>
         <link rel="stylesheet" type="text/css" href="chrome://browser/skin/harmony/ErrorPageTemplate.css">
 		
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Välkommen till Internet Explorer</title>
 
         <script src="chrome://browser/skin/harmony/errorPageStrings.js"></script>
-		
+
         <script src="chrome://browser/skin/harmony/httpErrorPagesScripts.js"></script>
     </head>
 
@@ -161,7 +161,7 @@
                     &nbsp;
                 </td>
                 <td id="MostLikelyAlign" valign="top" align="left">
-                    <h3 id="likelyCauses">Internet Explorer 7 ger förbättrad navigation genom surfning med flikar, webbsökning rakt från verktygsfältet, advancerad skrivning, lätt discovery, läsning och prenumerering till RSS feeds och mycket mer:</h3>
+                    <h3 id="likelyCauses">Internet Explorer 7 ger förbättrad navigation genom surfning med flikar, webbsökning rakt från verktygsfältet, advancerad skrivning, lätt discovery, läsning och prenumerering till RSS flöden och mycket mer:</h3>
                     <ul>
                         <li id="causeNotConnected">Surfning med flikar</li>
                         <li id="causeSiteProblem">Snabbflikar</li>
@@ -203,7 +203,7 @@
                     </h4>
                 </td>
             </tr>
-			
+
             <tr>
                 <td >
                     &nbsp;
@@ -222,7 +222,7 @@
                     </h4>
                 </td>
             </tr>
-			
+
             <tr>
                 <td >
                     &nbsp;
@@ -241,7 +241,7 @@
                     </h4>
                 </td>
             </tr>
-			
+
             <tr>
                 <td >
                     &nbsp;
