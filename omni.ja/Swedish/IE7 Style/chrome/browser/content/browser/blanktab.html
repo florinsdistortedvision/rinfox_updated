@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        body {
+            font-family: "Segoe UI", "verdana", "arial";
+            background-image: url("chrome://browser/skin/harmony/background_gradient.jpg");
+            background-repeat: repeat-x;
+            background-color: #E8EAEF;
+            margin-top: 20px;
+            margin-left: 20px;
+            color: #575757;
+        }
+
+        body.securityError {
+            font-family: "Segoe UI", "verdana" , "Arial";
+            background-image: url("background_gradient_red.jpg");
+            background-repeat: repeat-x;
+            background-color: #E8EAEF;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        body.tabInfo {
+            background-image: none;
+            background-color: #F4F4F4;
+        }
+
+        a {
+            color: rgb(19,112,171);
+            font-size: 1em;
+            font-weight: normal;
+            text-decoration: none;
+            margin-left: 0px;
+            vertical-align: top;
+        }
+
+        a:link, a:visited {
+            color: rgb(19,112,171);
+            text-decoration: none;
+            vertical-align: top;
+        }
+
+        a:hover {
+            color: rgb(7,74,229);
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 0.9em;
+        }
+
+        h1 {
+            color: #4465A2;
+            font-size: 1.1em;
+            font-weight: normal;
+            vertical-align: bottom;
+            margin-top: 7px;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 20px;
+            margin-bottom: 1px;
+        }
+
+        h3 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 10px;
+            margin-bottom: 1px;
+        }
+
+        h4 {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 12px;
+            margin-bottom: 1px;
+        }
+
+        h5 {
+            font-size: 1em;
+            font-weight: normal;
+            margin-bottom: 0px;
+            margin-top: 1px;
+            font-size: 0.9em;
+            color: #575757;
+        }
+
+        .actionIcon {
+            vertical-align: middle;
+            margin-top: 0px;
+            margin-right: 6px;
+        }
+
+        .infoBlock {
+            padding-left: 25px;
+            font-size: 0.9em;
+            display: block;
+            line-height: 1.1em;
+            color: #575757;
+        }
+
+        .errorCodeAndDivider {
+            font-size: 0.7em;
+            font-weight: normal;
+            color: #787878;
+        }
+
+        ul, ol {
+            font-size: 0.9em;
+            list-style-position: outside;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            line-height: 1.3em;
+        }
+
+        .divider {
+            border-bottom: #B6BCC6 1px solid;
+        }
+    </style>
+</head>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="chrome://browser/skin/harmony/ErrorPageTemplate.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Välkommen till surfning med flikar</title>
+        <script src="chrome://browser/skin/harmony/errorPageStrings.js" language="javascript" type="text/javascript">
+        </script>
+        <script src="chrome://browser/skin/harmony/httpErrorPagesScripts.js" language="javascript" type="text/javascript">
+        </script>
+    </head>
+
+    <body onLoad="javascript:setTabInfo('tabInfoBlockID');" class="tabInfo">
+
+        <table width="730" cellpadding="0" cellspacing="0" border="0">
+
+            <tr>
+                <td id="tabIconAlign" width="60" align="left" valign="top" rowspan="2">
+                    <img src="chrome://browser/skin/harmony/tab_icon.png" id="tabIcon" alt="Tab icon">
+                </td>
+                <td id="mainTitleAlign" valign="middle" align="left" width="*">
+                    <h1 id="mainTitle">Du har öppnat en ny flik</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td id="ErrorCodeAlign" class="errorCodeAndDivider" align="right">&nbsp;
+                    <div class="divider"></div>
+                </td>
+            </tr>
+
+          <tr>
+            <td>
+              &nbsp;
+            </td>
+            <td>
+              <p><h2 id="withTabs1">Med flikar kan du:</h2>
+              <ul>
+                <li id="withTabs2">Använda ett Internet Explorer fönster för att titta på alla dina webbsidor.</li>
+                <li id="withTabs3">Öppna länkar i en bakgrundsflik när du tittar på en webbsida.</li> <!-- Fy fan vad detta behöver ändras asså -->
+                <li id="withTabs4">Spara och öppna flera webbsidor samtidigt med hjälp av Favoriter och Hemsidoflikar.</li>
+              </ul>
+              </p>
+
+              <p><h2 id="getStarted1">För att börja:</h2>
+              <ul>
+                <li id="getStarted2">Tryck på CTRL knappen när du klickar på länkar (eller använd mitten musknappen).</li>
+                <li id="getStarted3">Klicka på vilken flik som helst med mitten musknappen för att stänga den.</li>
+                <li id="getStarted4">Tryck på ALT+ENTER från addressfältet eller sökrutan för att öppna resultatet i en ny flik.</li>
+              </ul>
+              </p>
+            </td>
+          </tr>
+          <tr>
+              <td>
+                  &nbsp;
+              </td>
+              <td>
+                  <p>
+                      <table>
+                        <tr>
+                            <td valign="top">
+                                <img src="chrome://browser/skin/harmony/help.gif" id="helpIcon" border="0" alt="Help Icon" class="actionIcon">
+                            </td>
+                            <td valign="top">
+                                <a href="https://support.mozilla.org/sv/kb/Inst%C3%A4llningarf%C3%B6nstret%20-%20Flikar"><ID id="learnMoreAboutTabs">Lär dig mer om flikar</ID></a>
+                            </td>
+                        </tr>
+                      </table>
+                  </p>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                 &nbsp;
+              </td>
+              <td>
+                 <div class="divider"></div>
+              </tr>
+          </tr>
+          <tr>
+              <td>
+                  &nbsp;
+              </td>
+              <td>
+                  <p>
+                    <table width="100%">
+                        <tr>
+                            <form name="skipTabFrom" onSubmit="javascript:skipTabCheck(document.skipTabFrom);" action="javascript:window.location.replace('about:blank')">
+                              <td>
+                                <input type="checkbox" name="skipTabCheckbox" id="dontShowPage">
+                                <label for="dontShowPage" id="dontShowPageText">Visa inte denna sida igen</label>
+                              </td>
+                              <td align="right">
+                                  <button id="closeButtonStyle" type="submit" style="width: 6.5em;"><ID id="closeButtonText">Stäng</ID></button>
+                              </td>
+                            </form>
+                        </tr>
+                    </table>
+                  </p>
+              </td>
+          </tr>
+        </table>
+    </body>
+</html>
