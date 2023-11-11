@@ -14,7 +14,7 @@ function setAttributes(element, attributes) {
 }
 
 // Title of About Window
-var aboutDialogTitle = "About Internet Explorer";
+var aboutDialogTitle = "Acerca de Internet Explorer";
 
 const isIE8Enabled = getComputedStyle(document.documentElement).getPropertyValue('--rinfox_tweak_ie8') == 1;
 
@@ -44,15 +44,15 @@ let aboutboxinfostregnth;
 let aboutboxinfoid;
 let aboutboxinfoupdate;
 if (isIE8Enabled) {
-	aboutboxinfoversion = "Version: 8.0.6001.18702";
-	aboutboxinfostregnth = "Cipher Stregnth: 256-bit";
-	aboutboxinfoid = "Product ID: 01404-014-0000025-714000";
-	aboutboxinfoupdate = "Update Versions: 0";
+	aboutboxinfoversion = "Versión: 8.0.6001.18702";
+	aboutboxinfostregnth = "Intensidad de cifrado: 256 bitS";
+	aboutboxinfoid = "Id. del producto: 01404-014-0000025-714000";
+	aboutboxinfoupdate = "Versiones de actualización: 0";
 } else {
-	aboutboxinfoversion = "Version: 7.0.6002.18005";
-	aboutboxinfostregnth = "Cipher Stregnth: 256-bit";
-	aboutboxinfoid = "Product ID: 89580-014-0000025-71495";
-	aboutboxinfoupdate = "Update Versions:0";
+	aboutboxinfoversion = "Versión: 7.0.6002.18005";
+	aboutboxinfostregnth = "Intensidad de cifrado: 256 bits";
+	aboutboxinfoid = "Id. del producto: 89580-014-0000025-71495";
+	aboutboxinfoupdate = "Versiones de actualización:0";
 }
 const aboutboxinfo = [
 	""+aboutboxinfoversion+"", 
@@ -69,7 +69,7 @@ for (i = 0; i <= aboutboxinfo.length - 1; i++) {
 
 // Text Area Legal Notice
 const legalnotice = document.createElement('textarea');
-const legalnoticestring = document.createTextNode("Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.");
+const legalnoticestring = document.createTextNode("Advertencia: este programa está protegido por las leyes de derechos de autor y otros tratados internacionales. La reproducción o distribución no autorizadas de este programa, o de cualquier parte del mismo, pueden dar lugar a penalizaciones tanto civiles como penales y serán objeto de todas las acciones judiciales que correspondan.");
 legalnotice.appendChild(legalnoticestring);
 
 
@@ -101,7 +101,7 @@ copyrightlink.addEventListener("click", (event) => {
 
 // Close Button
 const closebutton = document.createElement("button");
-const closebuttontext = document.createTextNode("OK");
+const closebuttontext = document.createTextNode("Aceptar");
 closebutton.appendChild(closebuttontext);
 closebutton.addEventListener("click", (event) => { window.close() });
 

@@ -154,7 +154,7 @@ Want to follow the latest developments, translations and bug fixes of rinFox? Jo
 * [Feedbro by Nodetics](https://addons.mozilla.org/en-US/firefox/addon/feedbroreader/)
 * [Add To Favorites Bar by me/florin](https://addons.mozilla.org/en-US/firefox/addon/add-to-favorites-bar/)
 * Mozilla for Firefox.
-* Microsoft for IE7 icons.
+* Microsoft for creating IE7/8.
 
 ### Translations
 * English - me (florin)

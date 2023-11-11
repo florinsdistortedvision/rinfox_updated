@@ -8,7 +8,7 @@ try {
   var sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);
   var appversion = parseInt(Services.appinfo.version);
   
-  var button_label = "Help";
+  var button_label = "Ayuda";
  
   CustomizableUI.createWidget({
 	id: "help-button", // button id
@@ -38,7 +38,7 @@ try {
 
 (function() {
   try {
-    var button_label = "View favorites, feeds, and history";
+    var button_label = "Ver los favoritos, las fuentes y el historial";
 
     CustomizableUI.createWidget({
       id: "library-button",
